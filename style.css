@@ -987,17 +987,28 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 714px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   margin: 0 auto 48px auto;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .planChoice .accounts {
+    margin-left: 5%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .planChoice .accountType {
   width: 130px;
   height: 50px;
-  margin: 8px 0;
+  margin: 8px;
   border-radius: 28px;
 }
 

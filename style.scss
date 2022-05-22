@@ -755,14 +755,20 @@ h4 {
     }
     .accounts {
         display: flex;
-        justify-content: space-between;
-        width: 714px;
+        justify-content: center;
+        width:100%;
         margin: 0 auto 48px auto;
+        overflow: auto;
+        white-space: nowrap;
+        @media (max-width:768px) {
+            margin-left: 5%;
+            justify-content: flex-start;
+        }
     }
     .accountType {
         width: 130px;
         height: 50px;
-        margin: 8px 0;
+        margin: 8px;
         border-radius: 28px;
         a {
             display: block;
