@@ -52,7 +52,6 @@ a {
     text-decoration: none;
 }
 
-
 /* ----------- img 隨螢幕寬度自動調整比例 ------------ */
 
 img {
@@ -66,873 +65,777 @@ img {
 	box-sizing: border-box;
 }
 
-/* ----------- CSS固定樣式 ------------ */
 
-$natural-color: #221E1F;
-$white-color: #ffffff;
+/* ----------- CSS 自訂樣式 ------------ */
+
 $primary-color: #56C4C5;
+$natural-text-color:#221E1F;
+$gray-color:#747474;
 
+.button-R {
+    width: 136px;
+    padding: 12px 0;
+    background: #ff5d50;
+    color: #ffffff;
+    border-radius: 22px;
+    font-size: 18px;
+    text-align: center;
+    &:hover {
+        background: darken(#ff5d50,20%);
+    }
+    @media (max-width: 576px) {
+        width: 110px;
+        padding: 8px 0;
+    }
+}
+.button-B {
+    width: 136px;
+    padding: 12px 0;
+    background: $primary-color;
+    color: #ffffff;
+    border-radius: 22px;
+    font-size: 18px;
+    text-align: center;
+    &:hover {
+        background: darken($primary-color,20%);
+    }
+    @media (max-width: 576px) {
+        width: 110px;
+        padding: 8px 0;
+    }
+}
 h2 {
     font-size: 48px;
     line-height: 70px;
     font-weight: 700;
     margin-bottom: 16px;
-    @media (max-width: 992px) {
+    @media (max-width: 576px) {
         font-size: 32px;
         line-height: 46px;
     }
 }
-
 h3 {
-    color: $natural-color;
-    font-size: 32px;
-    line-height: 46px;;
     text-align: center;
+    font-size: 32px;
+    line-height: 46px;
+    color: $natural-text-color;
     font-weight: 700;
     @media (max-width: 992px) {
         font-size: 28px;
         line-height: 40px;
     }
 }
-
 h4 {
+    margin-bottom: 24px;
     font-size: 24px;
     line-height: 35px;
-    color: $natural-color;
+    color: $natural-text-color;
     font-weight: 700;
-    @media (max-width: 992px) {
-        font-size: 18px;
-        line-height: 26px;
-    }
+    text-align: center;
 }
-
-.supplement {
+.pageTitleNote {
     font-size: 20px;
     line-height: 29px;
-    color: $natural-color;
-    text-align: center;
-    @media (max-width: 992px) {
-        font-size: 18px;
-        line-height: 26px;
+    color: #221e1f;
+    @media (max-width: 576px) {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
-
-.text {
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.mb-16 {
-    margin-bottom: 16px;
-}
-
-.mb-32 {
-    margin-bottom: 32px;
-}
-
-.mb-100 {
-    margin-bottom: 100px;
-}
-
 .shadow {
     box-shadow: 0px 2px 10px #00000014;
 }
-
-.actionButton-R {
-    display: block;
-    width: 136px;
-    padding: 12px 0;
-    text-align: center;
-    color: $white-color;
-    font-size: 18px;
-    border-radius: 22px;
-    background: #FF5D50;
-    &:hover {
-        background: #d23125;
-    }
-    @media (max-width: 576px) {
-        width: 128px;
-        padding: 8px 0;
-        line-height: 24px;
-        font-size: 16px;
-    }
-}
-.actionButton-G {
-    display: block;
-    width: 136px;
-    padding: 12px 0;
-    text-align: center;
-    color: $white-color;
-    font-size: 18px;
-    border-radius: 22px;
-    background: $primary-color;
-    &:hover {
-        background: rgb(24, 144, 150);
-    }
-    @media (max-width: 576px) {
-        width: 128px;
-        padding: 8px 0;
-        line-height: 24px;
-        font-size: 16px;
-    }
-}
-
-.foot {
-    height: 56px;
+.bottomBanner {
     background: #F5F5F5;
-    p {
-        text-align: center;
-        padding: 16px 0;
-        line-height: 24px;
+    text-align: center;
+    height: 56px;
+    padding: 16px 0 16px 0;
+}
+.backTop {
+    width: 70px;
+    height: 70px;
+    background: $primary-color;
+    color: #ffffff;
+    font-weight: 700;
+    padding-top: 24px;
+    text-align: center;
+    border-radius: 50px;
+    position: fixed;
+    top: 1000px;
+    right: 60px;
+    &:hover {
+        background: darken($primary-color, 20%);
+    }
+    @media (max-width: 576px) {
+        width: 50px;
+        height: 50px;
+        
     }
 }
-
-/* ----------- CSS樣式 ------------ */
-/* ----------- 首頁 ------------ */
+.textColor-B {
+    color:$primary-color;
+}
 
 .wrap {
-    max-width: 1400px;
-    margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
+    font-family: sans-serif;
+    line-height: 24px;
 }
-
-.container {
-    width:80%;
-    margin: 0 auto;
-}
-
-.topNav-desktop {
-    width: 100%;
-    position: absolute;
-    top: 0px;
+header {
+    padding:0 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 88px;
-    
+    margin-bottom: 120px;
     .logo {
-        height: 40px;
-    };
-
-    @media (max-width: 992px) {
-        display: none;
-    }
-}
-
-.topNav-desktop-width80 {
-    width: 80%;
-    margin: 0 10% 0 10%;
-}
-
-.topNav-mobile {
-    display: none;
-    border-bottom: 2px solid #FFD153;
-    height: 72px;
-    .logo {
-        height: 32px;
+        width: 218px;
+        a {
+            display: block;
+        }
     }
     @media (max-width: 992px) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-}
-
-.backTop {
-    display: block;
-    position: absolute;
-    right: -100px;
-    bottom: 24px;
-    width: 70px;
-    height: 70px;
-    background: $primary-color;
-    border-radius: 100px;
-    text-align: center;
-    color: $white-color;
-    padding: 28px 20px;
-    font-weight: 700;
-}
-
-.hero {
-    position: relative;
-    height: 768px;
-
-    .backColor-Y-deskTop {
-        position: absolute;
-        top: 0px;
-        right: -140px;
-    }
-    .mainImg-mobile {
-        display: none;
-    }
-    .mainVisual {
-        position: absolute;
-        top: 120px;
-        display: flex;
-        justify-content: space-between;
         width: 100%;
-        height: 530px;
-        .title {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            .smallTitle {
-                color: $primary-color;
-                font-size: 18px;
-                line-height: 26px;
-                margin-bottom: 8px;
-            }
-            p {
-                color: $natural-color;
-                font-size: 20px;
-                line-height: 29px;
-            }
-        }
-        .mainImg-mobile {
-            position: relative;
-            .mainImg-front {
-                width: 300px;
-                position: absolute;
-                left: 40px;
-                top: -70px;
-            }
+        height: 72px;
+        border-bottom: 2px solid #FFD153;
+        margin-bottom: 32px;
+        background: #ffffff;
+        .logo {
+            padding-top: 10px;
+            width: 180px;
         }
     }
-    .backTop-mobile {
-        display: none;
-        bottom: -26px;
-        right: -10px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+}
 
-    }
+/* ----------- Index Page ------------ */
 
+.wrapIndex {
+    max-width: 100vw;
+    height: 100vh;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+    position:relative;
     @media (max-width: 992px) {
-        .backColor-Y-deskTop {
-            display: none;
-        }
-        .mainImg-desktop {
-            display:none;
-        }
-        .mainVisual {
-            flex-direction: column;
-            align-items:center;
-            .title {
-                .smallTitle, p {
-                    font-size: 16px;
-                    line-height: 24px;
-                }
+        background-image: none;
+    }
+}
+.heroBall {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    top: 88vh;
+    width: 140px;
+    height: 360px;
+    @media (max-width: 992px) {
+        top: 100vh;
+        background-size: 126px;
+        width: 49px;        
+    }
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 120px;
+    @media (max-width:992px) {
+        flex-direction: column;
+        
+    }
+    .heroText {
+        .heroSubtitle {
+            color: $primary-color;
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 8px;
+            @media (max-width: 576px) {
+                font-size: 16px;
+                line-height: 24px;
             }
-            .mainImg-mobile {
-                display: block;
-                width:350px;
-                margin-top: 110px;
-            }
         }
-        .backTop-desktop {
-            display: none;
-        }
-        .backTop-mobile {
-            display:block;
+    }
+    .heroImage {
+        height: 70vh;
+        @media (max-width:992px) {
+            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
         }
     }
 }
-@media (max-width: 992px) {
-    .hero {
-        height: 600px;
-        margin-top: -88px;
-        margin-bottom: 210px;
-    }
-}
-
-.platform {
-    position: relative;
-    .backColor-G {
-        position: absolute;
-        top: -310px;
-        left: -350px;
-    }
-    .subTitle {
+.platformSection {
+    margin-bottom: 100px;
+    .sectionTitle {
         margin-bottom: 48px;
     }
-    .allSns {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 48px auto 100px auto;
-    };
-    .sns {
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 40px;
-        .snsImg {
-            width: 30%;
-            margin-bottom: 24px;
-        }
-        h4 {
-            margin-bottom: 24px;
-            text-align: center;
-        }
-        .text {
-            color: #747474;
-            text-align: center;
-        }
-    }
+}
+.platforms {
+    display: flex;
+    justify-content: space-between;
     @media (max-width: 992px) {
-        .sns {
-            width: 100%;
-        }
-        .backColor-G {
-            width: 126px;
-            left: -127px;
-            top: 14px;
-        }
+        flex-direction: column;
+        align-items: center;
+        
     }
 }
-
-.roles {
-    position: relative;
-    height: 580px;
+.perPlatform {
+    width: 30%;
+    margin: 0 2% 0 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (max-width: 992px) {
-        height: 1020px;
-    }
-    @media (max-width: 576px) {
-        height: 2100px;
-    }
-
-    .backColor-LG {
-        position: absolute;
-        width: 310px;
-        right: -200px;
-        top: 400px;
-        @media (max-width: 992px) {
-            width: 200px;
-            right:-60px;
-            top: 800px;
-        }
-        @media (max-width: 576px) {
-            width: 138px;
-            right: -45px;
-            top: 1955px;
-        }
-    }
-    .allRole {
-        width: 100%;
-        position: absolute;
-        justify-content: center;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 140px;
-    }
-    .allRole-row {
-        width: 50%;
-        display: flex;
-    }
-    .role {
-        width: 50%;
-        background: $white-color;
-        border-radius: 12px;
-        margin: 0px 8px 16px 8px;
-        padding-bottom: 24px;
-        .roleImg {
-            margin-bottom: 16px;
-            border-radius: 12px 12px 0px 0px;
-        };
-        h4 {
-            line-height: 1;
-            color: $primary-color;
-            text-align: center;
-        };
-        .text {
-            text-align: center;
-        }
-    }
-    @media (max-width: 992px) {
-        .allRole-row {
-            width: 80%;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .allRole-row {
-            flex-wrap: wrap;
-        }
-        .role {
-            width:100%;
-        }
-    }
-}
-
-.features {
-    display: flex;
-    justify-content: space-between;
-    .allFeature {
-        width: 50%;
-        display: flex;
-        flex-wrap: wrap;
-        .feature {
-            width: 45%;
-            margin-right: 5%;
-            margin-bottom: 5%;
-            padding: 32px 32px 48px 32px;
-            border-radius: 12px;
-            .featureImg {
-                width: 86px;
-                height: 86px;
-                margin-bottom: 24px;
-                border-radius: 100px;
-                display: flex;
-                justify-content: space-between;
-                padding: 16px;
-            };
-            .featureName {
-                font-size: 18px;
-                line-height: 26px;
-                margin-bottom: 16px;
-            };
-            p {
-                line-height: 24px;
-            };
-        };
-    }
-    .featureRight {
-        width: 40%;
-        .subTitle {
-            text-align: left;
-        };
-        .supplement {
-            text-align: left;
-            font-size: 18px;
-            margin-bottom: 24px;
-        }
-    }
-    @media (max-width: 1200px) {
-        flex-direction: column-reverse;
-        align-items: center;
-        .featureRight {
-            width: 100%;
-            .subTitle, .supplement {
-                text-align: center;
-            }
-            .supplement {
-                margin-bottom: 16px;
-            }
-            .actionButton-G {
-                margin: 0 auto;
-            }
-            margin-bottom: 32px;
-        }
-        .allFeature {
-            width: 100%;
-            // display: block;
-            .feature {
-                width: 23%;
-                margin: 0 1% 24px 1%;
-            }
-        }               
-    }
-    @media (max-width: 992px) {
-        flex-direction: column-reverse;
-        align-items: center;
-        .featureRight {
-            width: 100%;
-            .subTitle, .supplement {
-                text-align: center;
-            }
-            .supplement {
-                margin-bottom: 16px;
-            }
-            .actionButton-G {
-                margin: 0 auto;
-            }
-            margin-bottom: 32px;
-        }
-        .allFeature {
-            display: block;
-            .feature {
-                width: 230px;
-                margin: 0 auto 24px auto;
-            }
-        }               
-    }
-}
-
-.reviews {
-    position: relative;
-    height: 580px;
-    margin-bottom: 24px;
-    @media (max-width: 992px) {
-        height: 540px;
-    }
-    @media (max-width: 576px) {
-        height: 450px;
-    }
-    .backColor-LY {
-        position: absolute;
-        left: -40px;
-        top: 40px;
-        @media (max-width: 992px) {
-            width: 150px;
-        }
-        @media (max-width: 576px) {
-            width: 138px;
-        }
-    }
-    .subTitle {
-        margin: 104px;
-    };
-}
-.allReview {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.review {
-    width: 30%;
-    padding: 48px 32px 24px 32px;
-    margin :0 1% 24px 1%;
-    border-radius: 12px;
-    background: $white-color;
-    position: relative;
-    @media (max-width: 992px) {
-        width: 48%;
-        margin-bottom: 48px;
-    }
-    @media (max-width: 576px) {
-        width: 80%;
+    .platformLogo {
+        width: 120px;
         margin-bottom: 24px;
-    }
-    .reviewerImg {
-        position: absolute;
-        width: 80px;
-        top: -60px;
-        .reviewerImgIn {
-            border-radius: 100px;
+        @media (max-width: 992px) {
+            margin-bottom: 16px;
         }
     }
-    .info {
-        margin-top: 24px;
-        .companyName {
-            font-size: 16px;
-            margin-bottom: 8px;
-        }
-        .position-rate {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            .position {
-                line-height: 24px;
-            };
-            .rate {
-                width: 120px;
-                display: flex;
-                justify-content: space-between;
-                .star {
-                    width: 16px;
-                }
-            }
-        }
-    }
-}
-@media (max-width: 992px) {
-    .HowBig {
-        display: none;    
-    }
-}
-@media (max-width: 576px) {
-    .Zoe {
-        display: none;    
-    }
-}
-
-.scroll {
-    display: flex;
-    justify-content: center;
-    .dotGray {
-        width: 10px;
-        height: 10px;
-        border-radius: 100px;
-        background: #DDDDDD;
-        margin: 0 8px;
-    }
-    .dotYellow {
-        width: 16px;
-        height: 10px;
-        border-radius: 50px;
-        background: #FFD153;
-        margin: 0 8px;
-    }
-}
-
-.goToAction {
-    margin-top: -120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px;
-    .backGround-smile {
-        position: relative;
-    }
-    .goToAction-content {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 260px;
-        .subTitle {
-            margin-bottom: 48px;
-        }
-    }
-}
-
-
-/* ----------- 計費方式說明 ------------ */
-
-.planHero {
-    height: 470px;
-    background: #F7F9FD;
-    position: relative;
-    border-radius: 0 0 0 300px;
-    .planImg-B {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-    }
-    .planImg-S {
-        display: none;
-        position:absolute;
-        right: 0px;
-        top: 0px;
-    }
-    .planTitle {
-        position: absolute;
-        margin-top: 180px;
-        margin-left: 10%;
-        p {
+    .perTitle {
+        @media (max-width: 992px) {
+            margin-bottom: 12px;
+            font-size: 18px;
             line-height: 24px;
         }
     }
+    p {
+        text-align: center;
+        color: $gray-color;        
+    }
+    @media (max-width: 992px) {
+        width: 100%;
+        margin-bottom: 28px;
+        
+    }
+}
 
-    @media (max-width: 375px) {
-        .planImg-B {
-            display: none;
+.roleSection {
+    position: relative;
+    margin-bottom: 100px;
+    .sectionSubtitle {
+        font-size: 20px;
+        line-height: 29px;
+        text-align: center;
+        margin-top: 16px;
+        margin-bottom: 48px;
+        @media (max-width: 576px) {
+            margin-bottom: 32px;
+            
         }
-        .planImg-S {
-            display: block;
+    }
+}
+.roleBall {
+    position: absolute;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg");
+    background-repeat: no-repeat;
+    width: 260px;
+    height: 350px;
+    right: 0px;
+    top: 1800px;
+    @media (max-width: 992px) {
+        background-size: cover;
+        width: 230px;
+        height: 260px;
+        top: 2850px; 
+    }
+    @media (max-width: 576px) {
+        background-size: cover;
+        width: 88px;
+        height: 160px;
+        top: 4100px; 
+    }
+
+}
+.roles {
+    display: flex;
+    .rolesRow {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+    @media (max-width: 992px) {
+        flex-direction: column;
+        align-items: center;
+        .rolesRow {
+            width: 100%;
+            margin-bottom: 24px;
         }
-        .planTitle {
-            margin: 48px auto 140px 5%;
+    }
+    @media (max-width:576px) {
+        .rolesRow {
+            flex-wrap: wrap;
+            margin-bottom: 0px;
+            justify-content: center;
         }
+    }
+}
+.perRole {
+    width: 50%;
+    margin: 0 3% 0 3%;
+    background: #ffffff;
+    
+    border-radius: 12px;
+    .roleImage {
+        margin-bottom: 16px;
+        border-radius: 12px 12px 0px 0px;
+    }
+    .perTitle {
+        color: $primary-color;
+        margin-bottom: 16px;
+    }
+    .roleContext {
+        text-align: center;
+        padding: 0 16px 24px 16px;
+    }
+    @media (max-width:576px) {
+        width: 100%;
+        margin-bottom: 24px;
     }
 
 }
 
-.planChoice {
-    height: 900px;
-    @media (max-width:992px) {
-        height: 1560px;
+.featureSection {
+    margin-bottom: 100px;
+}
+.features {
+    display: flex;
+    @media (max-width: 992px) {
+        flex-direction: column-reverse;
+        align-items: center;
     }
-
-    .backTop {
-        position: absolute;
-        top:-115px;
-        right: -60px;
-        @media (max-width: 992px) {
-            top:-300px;
-            right:0px;
-        } 
-    }
-    .subTitle {
-        margin-bottom: 48px;
-    }
-    .accounts {
-        display: flex;
-        justify-content: center;
-        width:100%;
-        margin: 0 auto 48px auto;
-        overflow: auto;
-        white-space: nowrap;
-        @media (max-width:768px) {
-            margin-left: 5%;
-            justify-content: flex-start;
-        }
-    }
-    .accountType {
-        width: 130px;
-        height: 50px;
-        margin: 8px;
-        border-radius: 28px;
-        a {
-            display: block;
-            text-align: center;
-            padding: 12px;
-            font-size: 18px;
-            line-height: 26px;
-        }
-    }
-    .accountType-B {
-        background: $primary-color;
-        a {
-            color: $white-color;
-        }
-    }
-    .accountType-W {
-        background: $white-color;
-        &:hover {
-            background: rgb(232, 252, 253);
-        }
-        border: 1px solid $primary-color;
-        a {
-            color: $primary-color;
-        }
-    }
-    .planContent {
-        position: relative;
-        margin: 0 auto;
+}
+.featureCard {
+    width: 50%;
+    .featureRow {
         display: flex;
         justify-content: center;
     }
-    .planBackColor-LY {
-        position: absolute;
-        width: 360px;
-        left: -400px;
-        top: 100px;
-    };
-    .planLayout {
-        position: relative;
-        width: 80%;
-        display: flex;
-        justify-content: center;
-        @media (max-width: 992px) {
+    @media (max-width: 992px) {
+        width: 100%;
+        margin-right: -6%;
+    }
+    @media (max-width: 576px) {
+        .featureRow {
             flex-direction: column;
             align-items: center;
         }
+        
     }
-    .planFrame {
-        padding: 10px 0 40px 0;
-        width: 450px;
-        margin: 0 12px 0 12px;
-        background: $white-color;
+
+}
+.perFeature {
+    width: 50%;
+    border-radius: 12px;
+    padding: 32px;
+    margin-right: 6%;
+    margin-bottom: 6%;
+    .featureImageBackground {
+        width: 86px;
+        height: 86px;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 32px;
+        .featureImage {
+            width: 52px;
+        }
+    }
+    .perTitle {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 16px;
+        text-align: left;
+    }
+    @media (max-width: 576px) {
+        width: 80%;
+        margin-right: 0;
+    }
+    
+}
+.featureText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    .sectionTitle {
+        text-align: left;
+        margin-bottom: 16px;
+    }
+    .sectionSubtitle {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 24px;
+    }
+    @media (max-width: 992px) {
+        align-items: center;
+        margin: 0 0 32px 0;
+        .sectionTitle {
+            text-align: center;
+        }
+        .sectionSubtitle {
+            text-align: center;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.feedbackBall {
+    position: absolute;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg");
+    height: 153px;
+    width: 153px;
+    top: 3000px;
+    left: 80px;
+    @media (max-width: 992px) {
+        width: 100px;
+        top:4340px;
+        background-position: right;
+        left:0px;  
+    }
+    @media (max-width: 576px) {
+        width: 100px;
+        top:5960px;
+        background-position: right;
+        left:0px;  
+    }
+}
+.feedbackSection {
+    margin-bottom: 100px;
+    position: relative;
+    
+    .sectionTitle {
+        margin-bottom: 104px;
+    }
+    .pages {
+        display: flex;
+        justify-content: center;
+        .dotGray {
+            width: 10px;
+            height: 10px;
+            background: #DDDDDD;
+            border-radius: 10px;
+            margin: 24px 4px;
+        }
+        .dotYellow {
+            width: 16px;
+            height: 10px;
+            background: #FFD153;
+            border-radius: 10px;
+            margin: 24px 4px;
+        }
+    }
+
+}
+.users {
+    display: flex;
+    justify-content: center;
+    margin: 0 -1%;
+    @media (max-width: 992px) {
+        .user3 {
+            display: none;
+        }
+    }
+    @media (max-width: 576px) {
+        .user2 {
+            display: none;
+        }
+    }
+}
+.perUser {
+    width: 32%;
+    margin: 0 1%;
+    padding: 48px 32px;
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    
+    .userImage {
+        position: absolute;
+        top: -50px;
+        width: 80px;
+        border-radius: 100px;
+        border: 1px solid #DDDDDD;
+
+    }
+    .feedbackContent {
+        padding-bottom: 24px;
+        
+    }
+    .company {
+        padding-top: 24px;
+        padding-bottom: 8px;
+        font-weight: 700;
+        border-top: 1px solid #DDDDDD;
+    }
+    .positionAndRate {
+        display: flex;
+        justify-content: space-between;
+    }
+    .rate {
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        .star {
+            width: 16px;
+            margin-left: 1%;
+        }
+    }
+    @media (max-width: 992px) {
+        width: 48%;
+    }
+    @media (max-width: 576px) {
+        width: 80%;
+    }
+
+}
+
+.footerImage{
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 260px ;
+    padding-bottom: 100px;
+    .sectionTitle {
+        margin-bottom: 48px;
+    }
+    @media (max-width:992px) {
+        .sectionTitle {
+            font-size: 32;
+        }
+    }
+}
+
+/* ----------- Plan Page ------------ */
+
+.wrapPlan {
+    height: 470px;
+    background: #F7F9FD;
+    border-radius: 0px 0px 0px 300px;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 100px;
+    @media (max-width: 992px) {
+    height: 542px;           
+    }
+    @media (max-width: 576px) {
+        height: 560px;           
+        }
+    header {
+        z-index: 10;
+    }
+    .planHeroText {
+        margin-left: 10%;
+    }
+    .heroPlanImage {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg");
+        background-repeat: no-repeat;
+        background-position: right top;
+        width: 885px;
+        height: 559px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: -1;
         @media (max-width: 992px) {
-            width: 335px;
-            margin-bottom: 24px;
+            top: 72px; 
         }
-        h4 {
-            display: block;
-            height: 60px;
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid #DDDDDD;
-            @media (max-width: 992px) {
-                font-size: 24px;
-            }
-        };
-        .text {
-            text-align: center;
+        @media (max-width: 576px) {
+            background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner_sm.svg");
+            margin-bottom: 60px;
+                     
         }
-        .text-alignLeft {
-            text-align: left;
+    }
+}
+
+.accountRow {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+    margin-bottom: 64px;
+    @media (max-width: 992px) {
+        margin-left: 10%;
+        justify-content: flex-start;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }        
+    }
+
+    .perAccount {
+        display: block;
+        width: 130px;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        font-size: 18px;
+        line-height: 26px;
+        padding: 8px 0 8px 0;
+        border-radius: 50px; 
+        text-align: center;
+        margin: 0 8px;
+        @media (max-width: 576px) {
+            width: 100px;
         }
-        .formula {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-left: 24px;
-            margin-right: 24px;
-            @media (max-width: 992px) {
-                margin-left: 16px;
-                margin-right: 16px;
-                
-            }
-            .formulaBlock {
-                background: #F5F5F5;
-                border-radius: 12px;
-                padding: 32px 24px;
-                width: 169px;
-                @media (max-width: 992px) {
-                    font-size: 28px;
-                    width: 140px;
-                    padding: 32px 16px;
-                }
-            }
-            .formulaTitle {
+    }
+    .accountActive {
+        background: $primary-color;
+        color: #ffffff;
+    }
+    .accountHover {
+        &:hover {
+            background: lighten($primary-color, 20%);
+            color: #ffffff;
+        }
+    }
+}
+.planSection {
+    position: relative;
+}
+.planBall {
+    position: absolute;
+    width: 100px;
+    height: 360px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    z-index: -100;
+    top: 920px;
+    @media (max-width: 992px) {
+        height: 204px;
+        width: 96px;
+        top: 1500px;
+        
+    }
+}
+.planType {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    .perTitle {
+        padding: 20px;
+    }
+    @media (max-width: 992px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.perPlan {
+    width: 50%;
+    max-width: 460px;
+    margin: 0 2%;
+    background: #ffffff;
+    border-radius: 12px;
+    @media (max-width: 992px) {
+        width: 80%;
+        margin-bottom: 24px;
+    }
+    @media (max-width: 576px) {
+        width: 100%;
+    }
+
+    .perPlanContent {
+        margin: 0 32px 32px 32px;
+    }
+    .perTitle {
+        border-bottom: 1px solid #dadada;
+    }
+    .plantext {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    .formula {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 32px;
+        .formulaBox {
+            background: #F5F5F5;
+            border-radius: 12px;
+            width: 45%;
+            padding-top:40px;
+            padding-bottom: 40px;
+            .accountTitle {
                 font-size: 12px;
                 line-height: 17px;
                 text-align: center;
             }
             .number {
+                text-align: center;
                 font-size: 32px;
                 line-height: 35px;
-                text-align: center;
-                @media (max-width: 992px) {
+                @media (max-width: 576px) {
                     font-size: 28px;
                 }
-            }
-            .unit {
-                font-size: 12px;
-                line-height: 17px;
-            }
-            .color-G {
-                color: $primary-color;
-            }
-        }
-        .planFeatures {
-            margin: 0 24px 40px 24px;
-            .planPerFeature {
-                display: flex;
-                .mark {
-                    margin-right: 12px;
+                span {
+                    font-size: 12px;
+                    line-height: 17px;
                 }
             }
         }
-        .actionButton-G {
-            margin: 0 auto;
-        }   
+        .equal {
+            padding: 5%;
+        }       
     }
+    .perPlanFeature {
+        margin-bottom: 32px;
+        @media (max-width: 576px) {
+            font-size: 14px;
+            
+        }
+    }
+    .featureList {
+        display: flex;
+        margin-bottom: 16px;
+        .check {
+            margin-right: 12px;
+        }
+    }
+    .button-B {
+        display: block;
+        margin: 0 auto;
+    }
+
 }
 
-.planQuestion {
-    margin-bottom: 90px;
-    .subTitle {
+.questionSection {
+    margin-bottom: 100px - 16px;
+    .sectionTitle {
         margin-bottom: 48px;
     }
-    .questions {
-        width: 80%;
-        margin: 0 auto;
+}
+.perQuestionSection {
+    margin-bottom: 16px;
+    .question {
+        padding: 16px 32px;
+        display: flex;
+        justify-content: space-between;
         font-size: 18px;
         line-height: 28px;
-        @media (max-width: 992px) {
-            width: 100%;
+        @media (max-width:576px) {
+            font-size: 16px;
+            line-height: 24px;
         }
-        .question {
-            display: block;
-            padding: 16px 32px;
-            border-radius: 12px;
-            .questionTop {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                color:$natural-color
-            }
-            .openAnswer {
-                color: $primary-color;
-                margin-bottom: 24px;
-            }
-            .question-A {
-                color: #747474;
-                line-height: 32px;
-            }
-
-        }
-
     }
-
+    .answer {
+        margin-top: -8px;
+        padding: 0 32px 16px 32px;
+        color: #747474;
+        line-height: 32px;
+    }
 }
